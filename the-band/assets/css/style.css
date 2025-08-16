@@ -1,0 +1,183 @@
+/* Reset css */
+* {
+    /* Emmet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    /*không để vào the * vì nó sẽ áp dụng font-family cho tất cả thẻ (kể cả thẻ không chứa thuộc tính font-family)
+    sử dụng vậy để những thẻ có font-size kế thừa sẽ tự thay đổi theo thôi*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+1. Từ ngoài vào trong (wrapper -> **header** -> những element trong header) 
+2. Từ trên xuống dưới (**header** -> ... -> footer)
+3. Từ trái sang phải (trong header: **navigative** -> search)
+4. Tổng quan đến chi tiết
+*/
+
+/*
+1. Vị trí
+2. Kích thước(width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn hay vuông,...)
+*/
+
+
+#wrapper{
+
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 46px;
+    background-color: #000;
+
+    
+    /* vì lúc tạo xong slider -> header bị slider đè lên trên khi lướt xuống dưới -> nếu thấy vẫn còn bị đè tăng giá trị lên dần*/
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li {
+    /* để cho dồn lên 1 dòng, width theo kích thước content */
+    display: inline-block;
+ 
+}
+
+#nav li {
+    position: relative;
+    list-style-type: none;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+
+     /* default của a là inline -> width theo content -> nhưng lúc hover vào cần màu xám toàn bộ width
+    -> sài block -> vì block sẽ kế thừa kích thước lớp cha là li (inline-block) */
+    display: block;
+}   
+
+/* Để hiện subnav con khi gơ chuột vào box More */
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav{
+    min-width: 160px;
+      /* ẩn đi vì nó sẽ dựa trên vị trí của cha là li(more) */
+    display: none;
+
+    position: absolute;
+    top: 100%; 
+    /* nghĩa là cách header 46px (cách vị trí cố định là li-relative: đúng 100% height của li) */
+
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#nav .subnav a { 
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0px 21px;
+    
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer; 
+    /* để vào hover thay vì ở trên -> vì cần đổi màu -> cần hover -> sẳn nên để vào luôn rõ ngữ nghĩa hơn -> 
+    không thì bỏ vào #header .search-btn luôn cũng được */
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    
+}
+
+/* SLider */
+#slider{
+    position: relative;
+    /* vì header có position là fixed -> nổi lên trên tầng cao hơn -> slider sẽ bị chèn xuống dưới -> tạo khoảng cách để không bị chèn mất ảnh,... */
+    margin-top: 46px;
+    /* padding-top để giữ cho bức ảnh-slider theo tỉ lệ 2:1 (width height) */
+    padding-top: 50%;
+    background: url(../img/chicago.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content{
+    /* Cho nó lên tầng cao hơn -> vì tỉ lệ ảnh là 2:1 -> thêm box chữ này vào bị lỗi tỉ lệ */
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+
+    /* CÁCH 1: căn giữa chữ */
+    /* left: 50%;
+    font-size: 18px;
+    transform: translateX(-50%); */
+    text-align: center;
+
+    /* CÁCH 2 */
+    width: 100%;
+
+    /* CÁCH 3 */
+    /* right: 0;
+    left: 0; */
+}
+#slider .text-heading{
+    /* Giảm độ dày chữ */
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+
+
+/* ---------------CONTENT--------------- */
+
+#content{
+    
+}
+
+/* ---------------FOOTER--------------- */
+#footer{
+    
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML cơ bảnt</title>
+</head>
+<body>
+    <!-- Thẻ heading: từ h1 -> h6
+    Thường trang web chỉ có một thẻ h1 
+    Nếu ghi h7 thì không biết đây là thẻ gì -> trả về text bình thường 
+    -->
+    <h1>Tiêu đề h1</h1>
+    <h2>Tiêu đề h2</h2>
+    <h3>Tiêu đề h3</h3>
+    <h4>Tiêu đề h4</h4>
+    <h5>Tiêu đề h5</h5>
+    <h6>Tiêu đề h6</h6>
+    <div>div -> Thẻ thông dụng, khối -> thường để bao bộc các thẻ khác -> một đối tượng</div>
+    <h7>h7 -> Không hiểu là thẻ gì -> hiện thị text thông thường</h7>
+<!-------------------------------------------------------------------------------------------------------- -->
+    <!-- Sử dụng thẻ ul -> unordered list -> danh sách không có thứ tự, dạng liệt kê ra thôi 
+    mặc định (không để gì) -> disc: chấm tròn đặc
+    có thể thêm thuộc tính type = "square", "circle"
+    type thường sử dụng trong html4 -> khuyến khích sài css 
+    -->
+    <h3>Nội dung thiết kế Web</h3>
+    <ul type = "square">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScipt</li>
+    </ul>
+
+    <!-- Sử dụng thẻ ol: odered list -> danh sách có thứ tự
+    mặc định (không để gì) -> 1
+    thuộc tính type: 1, A, a, I, i
+    thuộc tính: start, reverse
+     -->
+    <h3>Các bước Skincare</h3>
+    <ol type = "i" start = "2">
+        <li>Tẩy trang</li>
+        <li>Sửa rửa mặt</li>
+        <li>Cấp ẩm</li>
+    </ol>
+<!-------------------------------------------------------------------------------------------------------- -->
+    <!-- Liên kết đến link/tài liệu nào đó -> Thẻ a 
+    thuộc tính href = "địa chỉ muốn liên kết tới"
+    thuộc tính targer = "_blank": mở ở tab mới; "_top": mở ở tab hiện tại; "_self": mở ở khung(frame) hiện tại; 
+    "_parent": mở ở khung (frame) cha 
+    mặc định của thuộc tính target là _top, thường được sử dụng _blank
+    -->
+
+    <!-- Nhấn vào văn bản để đến link liên kết-->
+    <a href="https://leetcode.com/" target="_blank">
+        Leetcode
+    </a>
+
+    <hr>
+
+    <!-- Nhấn vào hình ảnh để đến link liên kết
+    Mặc định hình 100% kích thước  
+    --> 
+    <a href="https://www.youtube.com/watch?v=Oz3Y2xuvmhQ&list=PLE5Bje814fYap5HKvdoLkysjpyRfMN1Br" target = "_blank">
+        <img src="../image/unnamed.jpg" alt="Hình minh họa" width="50">
+    </a>
+    <hr>
+    <!-- Chèn link vào khung -> iframe -->
+    <iframe width="768" height="480" src="https://www.youtube.com/embed/4wVYT1Wmo-A?list=PLE5Bje814fYap5HKvdoLkysjpyRfMN1Br" title="[HTML] 01 - HTML Cơ bản - 30 phút tạo trang web đủ nội dung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+    <p>Ngoài ra còn có thẻ video, audio,...</p>
+    <hr>
+<!-------------------------------------------------------------------------------------------------------- -->
+    <!-- Trong ul, ol không chứa trực tiếp văn bản, chỉ chứa thẻ li bên trong  
+     -->
+    <h3>Danh sách lồng: Môn yêu thích của tôi</h3>
+    <ul>
+        <li>Toán
+            <ul>
+                <li>Toán rời rạc</li>
+                <li>Đại số tuyến tính</li>
+                <li>Xác suất thống kê</li>
+            </ul>
+        </li>
+        <li>Anh văn
+            <ul>
+                <li>Anh văn 1</li>
+                <li>Anh văn 2</li>
+                <li>Anh văn 3</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

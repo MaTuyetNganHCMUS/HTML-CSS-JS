@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:valid{
+            border-color: aquamarine;
+        }
+        input:invalid{
+            border-color: red;
+        }
+        input:out-of-range{
+            border-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>DEMO VALIDATION</h2>
+        Email:
+        <input type="email" name="email" required/>
+        <br>
+        Tuổi:
+        <input type="number" name="tuoi" min="18" max="60" title="Nhập tuổi từ 18 đến 60"/>
+        <br>
+        Số di động:
+        <input type="text" name="didong" pattern="(\+84|0)[0-9]*" title="Nhập số điện thoại bắt đầu bằng +84 hoặc 0">
+        <br>
+        <button type="submit">SEND</button>
+    </form>
+</body>
+</html>
+
+<!-- 
+requied: bắt buộc người dùng phải nhập 
+min, max với number
+minlength, maxlength với text
+pattern -> regular expression
+thuộc tính title với thẻ input -> tùy chỉnh thông báo lỗi hiện thỉ ra màn hình
+-->

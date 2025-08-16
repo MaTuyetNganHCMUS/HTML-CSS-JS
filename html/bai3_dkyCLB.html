@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký clb yêu nhạc</title>
+    <style>
+        table{
+            border: 2px solid rgb(30, 132, 112);
+            margin:auto
+        }
+        td{
+            border: 1px solid rgb(30, 132, 112);
+            border-style: dotted;
+            padding: 10px;
+        }
+        tr:first-child {
+            font-size: 18px;
+            text-align: center;
+            color: rgb(226, 43, 183);
+        }
+        tr:last-child{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- nếu có upload hình thì trong thẻ mở form phải có các thuộc tính
+    default method="get" => cần chuyển sang method="post"
+    enctype="multipart/form-data" 
+    -->
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2">ĐĂNG KÝ THÀNH VIÊN CLB YÊU NHẠC</td>
+            </tr>
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    <input type="text" name="hoten"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input type="text" name="tendangnhap"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="matkhau"/></td>
+            </tr>
+            <tr>
+                <td>Gõ lại mật khẩu</td>
+                <td><input type="password" name="matkhau2"/></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <!-- RADIO phải có name giống nhau để chỉ chọn là Nam or Nữ -->
+                    <input type="radio" name="phai" value="nam"/>Nam
+                    <input type="radio" value="nu" name="phai" checked/>Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Ngoại ngữ</td>
+                <td>
+                    <!-- CHECKBOX không cần name giống nhau, nhưng nên để giống -->
+                    <input type="checkbox" value="anh" name="ngoaingu"/>Anh
+                    <input type="checkbox" value="phap" name="ngoaingu"/>Pháp
+                    <input type="checkbox" value="hoa" name="ngoaingu"/>Hoa
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <!-- selected để chọn default, trong thẻ select có thêm multiplate để được chọn nhiều lựa chọn -->
+                    <select name="nghenghiep">
+                        <option value="HS-SV">Học sinh - sinh viên</option>
+                        <option value="it">IT</option>
+                        <option value="bacsi" selected>Bác sĩ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hình</td>
+                <td><input type="file" name="hinh"/></td>
+            </tr>
+            <tr>
+                <td>Sở thích</td>
+                <td><textarea name="sothich" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

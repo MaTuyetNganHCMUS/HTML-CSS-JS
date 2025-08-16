@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính tạo nền</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(0, rgba(0, 0, 255, 0.4), rgba(176, 153, 83, 0.4)), url(https://png.pngtree.com/png-clipart/20230429/ourmid/pngtree-3d-big-golden-star-png-image_6740125.png), url(https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/12/23/987669/264193658_6378407806.jpg);
+            background-size: 200px; /*nghĩa là width là 100px, chiều dài sẽ chỉnh theo tỉ lệ để hình không bị móp méo(có thể truyền 2 tham số rộng, dài)*/
+            background-repeat: no-repeat; /*repeat-x: lặp theo chiều ngang; repeat-y: lặp theo chiều dọc*/
+
+            border: 20px dashed #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+            background-origin: content-box;
+            background-position: right top;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+</body>
+</html>
+

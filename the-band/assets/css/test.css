@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+    
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* id dùng trong thẻ div -> display: block; (theo kích thước của cha là html) -> toàn bộ chiều rộng rồi -> điều chỉnh chiều cao thôi */
+    height: 46px;
+    background-color: black;
+
+    /* vì lúc tạo xong slider -> header bị slider đè lên trên khi lướt xuống dưới */
+    z-index: 1;
+}
+
+#nav{
+    /* thẻ ul -> display:  block*/
+    display: inline-block;
+}
+
+
+#nav > li {
+     /* thẻ li -> display: list-item -> mỗi element trên 1 dòng và o (đầu dòng) -> muốn trên một dòng -> display: inline-block (dạng inline nhưng có thể điều chỉnh kích thước) */
+    /* display: inline-block; */
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a {
+text-transform: uppercase;
+}
+
+#nav li a {
+    color: #fff;
+text-decoration: none;
+    /* line-height để căn giữa chữ theo chiều cao của header */
+    line-height: 46px; 
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#nav li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .subnav{
+    /* ẩn đi vì nó sẽ dựa trên vị trí của cha là li(more) */
+    display: none;
+    position: absolute;
+    top: 100%;
+    min-width: 160px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav a{
+    color: black;
+    display: block;
+    padding: 0 12px;
+}
+
+#nav .ti-arrow-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    float: right;
+     padding: 0 24px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-btn .search-icon {
+    color: #fff;
+    line-height: 46px;
+    font-size: 20px;
+}
+
+/* ---------------SLIDER--------------- */
+
+#slider{
+    position: relative;
+    /* vì header có position là fixed -> nổi lên trên tầng cao hơn -> slider sẽ bị chèn xuống dưới -> tạo khoảng cách để không bị chèn mất ảnh,... */
+    margin-top: 46px;
+    /* padding-top để giữ cho bức ảnh-slider theo tỉ lệ 2:1 (width height) */
+    padding-top: 50%;
+    background: url(../img/chicago.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content{
+    /* Cho nó lên tầng cao hơn -> vì tỉ lệ ảnh là 2:1 -> thêm box chữ này vào bị lỗi tỉ lệ */
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+
+    /* CÁCH 1: căn giữa chữ */
+    /* left: 50%;
+    font-size: 18px;
+    transform: translateX(-50%); */
+    text-align: center;
+
+    /* CÁCH 2 */
+    width: 100%;
+
+    /* CÁCH 3 */
+    /* right: 0;
+    left: 0; */
+}
+#slider .text-heading{
+    /* Giảm độ dày chữ */
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* ---------------CONTENT--------------- */
+
+#content{
+    
+}
+
+/* ---------------FOOTER--------------- */
+#footer{
+    
+}

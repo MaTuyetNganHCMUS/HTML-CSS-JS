@@ -1,0 +1,82 @@
+.test-relative{
+    width: 300px;
+    position: relative;
+    height: 300px;
+}
+
+.box0 {
+    padding: 20px;
+    background-color:rgb(23, 20, 15);
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
+.box1{
+    padding: 10px;
+    background-color: aquamarine;
+
+    position: relative;
+    left: 100px;
+    top: 15px;
+}
+.box2{
+    padding: 10px;
+    background-color: rgb(193, 227, 22);
+
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+.box3{
+    padding: 10px;
+    background-color: brown;
+    position: sticky;
+    width: 200px;
+    top: 50px;
+}
+
+.box32 {
+    width: 400px;
+    background-color: blue;
+}
+/* =================================================== */
+
+.main {
+    height: 200px;
+    background-color:rgb(193, 227, 10);
+    border: 10px dashed red;
+    padding: 20px;
+    position: relative;
+}
+
+.main .box4 {
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.main .box5 {
+    background-color: blueviolet;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* =================================================== */
+.main2{
+    height: 500px;
+    width: 500px;
+    background-color: cadetblue;
+    /* position: fixed; */
+    /* margin: auto; */
+}
+
+.box6 {
+    height: 90px;
+    width: 90px;
+    background-color: rgba(253, 112, 41, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* margin: auto; */
+}

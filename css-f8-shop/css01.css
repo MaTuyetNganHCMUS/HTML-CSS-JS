@@ -1,0 +1,20 @@
+:root{
+    --my-color: violet; /*đây là biến glocal*/
+}
+
+h1 {
+    --my-color: green; /*đây là biến ở local*/
+    color: var(--my-color)
+}
+
+h2 {
+    color: var(--my-color)
+}
+
+h3 {
+    color: var(--my-color)
+}
+
+h4 {
+    color: var(--my-color)
+}

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cơ bản để thiết kế web</title>
+    <style>
+        h2 {
+            color: red
+        }
+        h3{
+            color: blueviolet;
+        }
+
+        div img{
+            width: 700px;
+            height: auto; /*giữ tỷ lệ ảnh*/
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            font-weight: bold;
+            color:rgb(72, 207, 35)
+        }
+    </style>
+</head>
+<body>
+    <h1>Trang chính</h1>
+    <p>Hướng dẫn học html + css + js</p>
+    <p>Nhấn vào hình hoặc chữ để liên kết tới trang youtube tự học</p>
+    <a href="https://youtu.be/4wVYT1Wmo-A?si=VrjqYSnWdO1NBw21" target = "_blank">
+        <img src="/image/unnamed.jpg" alt="Avt">
+        <br>
+        <div>Youtube tự học</div>
+    </a>
+    <hr>
+
+    <div>
+        <h2>HTML</h2>
+        <h3>Bài 1: HTML cơ bản</h3>
+        <p>
+            Tag: thẻ, đơn vị nhỏ nhất trong html. Gồm 2 loại: thẻ mở và thẻ đóng. Có một số thẻ tự đóng (không cần thẻ đóng). <br>
+            Element: là một cặp thẻ mở và thẻ đóng cùng với nội dung bên trong (nếu có). <br>
+            Attribute: thuộc tính, thông tin bổ sung nằm bên trong thẻ mở. 
+        </p>
+        <h4>Các thẻ html thông dụng</h4>
+        <ul>
+            <li>&lt;h1&gt; -> &lt;h6&gt;: thẻ tiêu đề (heading)</li>
+            <li>&lt;p&gt;: đoạn văn</li>
+            <li>&lt;a&gt;: chứa link để liên kết tới</li>
+            <li>&lt;div&gt;: khối, để chứa các thẻ khác tạo thành một đối tượng</li>
+            <li>&lt;ul&gt;: danh sách không có thứ tự</li>
+            <li>&lt;ol&gt;: danh sách có thứ tự</li>
+            <li>&lt;li&gt;: list item</li>
+            <li>&lt;br&gt;: thẻ tự đóng(không có thẻ đóng), để xuống dòng</li>
+            <li>&lt;thr&gt;: thẻ tự đóng (không có thẻ đóng), có hàng ngang dùng phân cách đoạn</li>
+            <li>&lt;img&gt;, &lt;video&gt;, &lt;audio&gt;,...</li>
+        </ul>
+
+        <a href = "html/bai1.html" target = "_blank">Test các thẻ</a>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Bài 2: Tạo bảng trong html</h3>
+        <h4>Để tạo bảng ta cần các thẻ sau</h4>
+            <ul>
+                <li>&lt;table&gt;: khai báo bảng</li>
+                <li>&lt;tr&gt;: dòng</li>
+                <li>&lt;td&gt;: ô dữ liệu</li>
+                <li>&lt;th&gt;: ô tiêu đề</li>
+                <li>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;: phần đầu, thân, chân bảng</li>
+            </ul>
+        <h4>Một số thuộc tính của bảng thường dùng</h4>
+        <ul>
+            <li>colspan = "n": gộp n cột</li>
+            <li>rowspan = "n": gộp n dòng</li>
+        </ul>
+
+        <a href="html/bai2_TKB.html" target = "_blank">Test thời khóa biểu</a>
+        <br>
+        <a href="html/bai2_banco.html" target = "_blank">Test bàn cờ</a>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Bài 3: Thiết kế form trong html</h3>
+        <p>Html form gồm các thành phần nhập liệu để thu thập thông tin từ người dùng</p>
+        <ul type = "square">
+            <li>
+                &lt;form&gt; 
+                <ul>
+                    <li>action: xác định trang sẽ xử lý khi submit form</li>
+                    <li>method: default là GET, chỉ định phương thức gửi dữ liệu lên server</li>
+                    <li>enctype: loại dữ liệu gửi đi</li>
+                </ul>
+            </li>
+            <li>
+                &lt;input&gt;
+                <ul>
+                    <li>type: chỉ định loại control nhập liệu(text, number, email, password, checkbox, radio, submit/reset/button, file)</li>
+                </ul>
+            </li>
+            <li>&lt;select&gt;</li>
+            <li>&lt;textarea&gt;</li>
+            <li>&lt;label&gt;, &lt;fieldset&gt;, &lt;legend&gt;</li>
+        </ul>
+
+        <a href="html/bai3_dkyCLB.html" target="_blank">Test FORM đăng ký thành viên clb yêu nhạc</a>
+        <br>
+        <a href="html/bai4_validation.html" target="_blank">Test FORM với VALIDATION</a>
+    </div>
+    <hr>
+    <div>
+        <h2>CSS</h2>
+        <h3>Bài 1: Cơ bản về CSS</h3>
+
+        <div>
+            <h4>Các loại về CSS: có 3 loại</h4>
+            <ul>
+                <li>Inline StyleSheet: chỉ được áp dụng tại thẻ đó</li>
+                <li>Internal StyleSheet: tạo một thẻ style trong thẻ head của html. Chỉ được áp dụng cho trang chứa thẻ này thôi</li>
+                <li>External StyleSheet: định nghĩa ở file .css riêng, những trang nào cần thì chèn .css vào</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4>Các loại selector</h4>
+            <p>Selector là ký hiệu được dùng để xác định các thẻ để áp dụng css</p>
+            <ul>
+                <li>Html Selector: tag{css}</li>
+                <li>Class Selector: .tenclass{css}. Thẻ muốn áp dụng cần: &lt;tentag class="tenclass"&gt; </li>
+                <li>ID Selector: #tenid{css}. Thẻ muốn áp dụng cần: &lt;tentag id="tenid"&gt;</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4>CSS - khoanh vùng</h4>
+            <div>Ví dụ</div>
+            <img src="image/css01-1.png" alt="Hình ví dụ css - khoanh vùng" >
+
+            <h4>CSS - nhiều selector</h4>
+            <div>Ví dụ</div>
+            <img src="image/css01-2.png" alt="Hình ví dụ css - nhiều selector">
+        </div>
+        
+        <div>
+            <h4>CSS - liên kết - thẻ a</h4>
+            <div>Ví dụ: chú ý thẻ a bình thường và a:honver</div>
+            <img src="image/css01-3.png" alt="Hình ví dụ css - liên kết">
+        </div>
+
+        <a href="css/css01.html" target="_blank">Test các loại css</a>
+    </div>
+    <hr>
+    <div>
+        <h3>Bài 2: Nạp chồng css</h3>
+
+        <div>
+            <h4>Phạm vi ảnh hưởng</h4>
+            <p>Sự chồng chéo xảy ra khi một thẻ chịu tác động bởi nhiều loại css - selector khác nhau. 
+                Khi đó thứ tự ưu tiên sẽ quyết định định dạng của đối tượng.<br>
+                Thứ tự như sau ưu tiên:
+            </p>
+
+            <ol>
+                <li>Inline Style</li>
+                <li>ID StyleSheet: id là duy nhất nếu có nhiều hơn 1 id cho thẻ thì lỗi -> thường là duy nhất cho trang</li>
+                <li>Class StyleSheet, Attribute, Pseudo-class (hover)</li>
+                <li>HTML tag, Pseudo-element</li>
+                <li>Equal specificity: nếu cùng mức độ ưu tiên thì cái nào định nghĩa sau sẽ ưu tiên hơn, ghi đè lên cái trước</li>
+                <li>Universal selector (thẻ *), Inherited (kế thừa)</li>
+                <li>Default css (mặc định)</li>
+            </ol>
+
+            <div>Lưu ý: </div>
+            <ul>
+                <li>Internal và External là giống nhau, nếu cùng loại selector thì cái nào định nghĩa sau thì ghi đè -> ưu tiên cái đó</li>
+                <li>Để ép thành ưu tiên nhất -> thêm !important ngay sau thuộc tính css muốn thay đổi lên thứ tự ưu tiên nhất</li>
+            </ul>
+        </div>
+            
+        <div>
+            <h4>Quy luật nạp chồng</h4>
+            <div>Có 2 hình thức</div>
+            <ul>
+                <li>Cộng gộp: Các thuộc tính css khác nhau từ nhiều selector sẽ được cộng gộp để áp dụng cho phần tử</li>
+                <li>Ghi đè: Các thuộc tính giống nhau từ nhiều selector sẽ được ghi đè theo thứ tự ưu tiên</li>
+            </ul>
+        </div>
+            
+        <a href="css/css02.html" target="_blank">Test nạp chồng css</a>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Bài 3: CSS box - model</h3>
+        <img src="image/css03-1.png" alt="Hình box-model">
+        <div>
+             <div>Trong CSS, mọi phần tử HTML đều được coi là box(hộp). Một box bao gồm:</div>
+            <ul>
+                <li>Content: nội dung thực sự: văn bản, hình ảnh,...</li>
+                <li>Padding: độ dày từ Content tới Border</li>
+                <li>Border: đường viền của box</li>
+                <li>Margin: lề ngoài của box (khoảng cách từ phần tử này đến phần tử khác)</li>
+            </ul>
+            <div>Default kích thước content sẽ là kích thước của box (các phần còn lại bằng 0)</div>
+            <div>Lưu ý: khi khai báo sẽ theo thứ tự chiều kim đồng hồ (top->right->bottom->left)</div>
+        </div>
+       
+        <h4>Cách khai báo Padding (tính từ content tới border)</h4>
+        <ul>
+            <li>padding: 10px; /*mọi phía đều 10px*/</li>
+            <li>padding: 10px 4px; /*trên-dưới 10 px, phải-trái: 4px*/</li>
+            <li>padding: 10px 4px 7px 8px; /*theo thứ tự trên phải dưới trái*/</li>
+            <li>padding: 10px 4px 7px; /*sẽ hiểu là phía bên trái = 0px*/</li>
+            <li>padding-top: 10px; /*tương tự với các phía còn lại*/</li>
+        </ul>
+
+        <h4>Cách khai báo Margin (tương tự Padding)</h4>
+
+        <h4>Cách khai báo Border (đường viền)</h4>
+        <ul>
+            <li>border: [size] [type] [color];</li>
+            <li>Các kiểu(type): solid, dotted, dashed, double, groove, ridge, inset, outset</li>
+            <li>border-top: [size] [type] [color]; /*tương tự các phía còn lại*/</li>
+            <li>border-style, border-color, border-width cụ thể cho từng phần</li>
+        </ul>
+      
+        <h4>Box-sizing (default là content-box)</h4>
+        <ul>
+            <li>box-sizing: content-box; /*tổng kích thước box = width, height (content) + padding + border*/</li>
+            <li>box-sizing: border-box; /*tổng kích thước box đúng bằng width, height*/</li>
+        </ul>
+        <div>Lưu ý: Với content-box: width, height là kích thước của content. Với border-box thì width, height là tổng kích thước của box</div>
+        <a href="css/css03.html" target="_blank">Test box-sizing</a>
+
+        <h4>Bo góc: border-radius</h4>
+        <ul>
+            <li>border-radius: 5px; /*bo cho 4 góc*/</li>
+            <li>border-top-left-radius: 5px; /*bo cho góc trên bên trái*/</li>
+            <li>border-top-right-radius: 5px;</li>
+            <li>border-bottom-left-radius: 5px;</li>
+            <li>border-bottom-right-radius: 5px;</li>
+            <li>border-..-radius: [x][y]; /*trục Oxy*/</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>DEMO CSS HOVER</h3>
+        <a href="css/baiTapHover.html" target="_blank">Test hover</a>
+    </div>
+    <hr>
+    <div>
+        <h3>Bài 4: CSS position - định vị vị trí</h3>
+        
+        <h4>Các loại position: có 5 loại</h4>
+        <ul>
+            <li>Static Position (mặc định)
+                <ul>
+                    <li>Thuộc tính mặc định của các element là position:static nếu không định nghĩa cho nó</li>
+                    <li>Element đó sẽ ở đúng vị trí của nó -> theo luồng bố cục bình thường (normal flow) -> không thể di chuyển nó với top, right, bottom, left -> chỉ có thể padding, margin,... </li>
+                    <li>VD: thẻ div có display block -> chiếm hết width của cha -> mỗi phần tử nằm trên 1 dòng của phần tử cha</li>
+                    <li>Không thể dùng top, right, bottom, left, z-index</li>
+                </ul>
+            </li>
+            <li>Relative Position (tương đối)
+                <ul>
+                    <li>Phần tử định vị so với vị trí ban đầu của nó (chứa position: relative)</li>
+                    <li>Tùy chỉnh lại vị trí với top, right, bottom, left mà không ảnh hưởng đến vị trí của những phần tử khác</li>
+                    <li>Khi dịch chuyển -> chỉ di chuyển trực quan -> phần tử đó vẫn giữ nguyên vị trí trong luồng, chiếm không gian như <strong>static</strong> (root element)</li>
+                    <li>Các phần tử khác không thể tràn vào vị trí trước đó (vị trí khi chưa dịch chuyển) của nó</li>
+                    <li>Thường được sử dụng trong trường hợp 
+                        <ul>
+                            <li>Làm phần tử cha để phần tử con <strong>absolute</strong> neo theo
+                            </li>
+                            <li>Muốn di chuyển nhẹ nhưng vẫn chiếm chỗ -> không làm ảnh hưởng đến bố cục hiện tại </li>
+                            <li>Tạo hiệu ứng/animation (coi thêm)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Absolute Position (tuyệt đối) 
+                <ul>
+                    <li>Phần tử định vị so với phần tử cha gần nhất có position khác static</li>
+                    <li>Nếu không có cha nào có position khác static, thì sẽ định vị so với thẻ <strong>html (viewport)</strong></li>
+                    <li>Bị loại khỏi flow tài liệu - luồng bố cục thông thường (các phần tử khác không thấy nó) -> có thể ảnh hưởng đến vị trí phần tử khác -> phần tử dưới nó sẽ lên thay vị trí của nó -> vì nó đã bị loại khỏi luồng trang tài liệu thông thường</li>
+                    <li>Không giữ chỗ -> bám theo vị trí phần tử cha có position khác static </li>
+                    <li>Gốc left: 0; top: 0 sẽ tính từ padding của phần tử cha</li>
+                    <li>Nếu là thẻ <strong>div</strong> display: block sẽ chiếm hết chiều rộng của cha -> nhưng khi set position: absolute thì chiều rộng chỉ đúng bằng content (vì width:auto) -> tương tự như inline-block nếu cần phải set width cụ thể cho nó -> nhưng display của nó vẫn là block</li>
+                    <li>Có vài trường hợp đặc biệt width không thu lại theo content
+                        <ul>
+                            <li>Set right: 0, left: 0 -> full chiều ngang</li>
+                            <li>Có set toàn bộ cho thẻ <strong>div</strong> là width: 100% -> không co lại theo content</li>
+                            <li>Khi kế thừa từ, phần tử này nằm trong flex container hoặc gird -> bị ảnh hưởng bởi tỉ lệ như flex: 1, align-items: stretch - kéo dãn ra</li>
+                        </ul>
+                    </li>
+                    <li>Một số mẹo 
+                        <ul>
+                            <li>Nếu ghi cả left và right -> ưu tiên left hơn (nếu đã set kích thước width cho element đó rồi) -> nếu chưa set width thì full width của cha</li>
+                            <li>Nếu ghi cả top và bottom -> ưu tiên top hơn (nếu đã set kích thước height cho elememt đó rồi) -> nếu chưa set height thì full height của cha</li>
+                            <li>Top: 100% -> dịch element nằm hoàn toàn bên dưới element cha -> có hệ lụy nếu border char != 0 
+                                <ul>
+                                    <li>Cách 1: top: 100% + margin-top: kích thước border element cha</li>
+                                    <li>Cách 2: bottom: - kích thước element con (luôn margin)</li>
+                                </ul>
+                            </li>
+                            <li>Để căn giữa theo chiều ngang 
+                                <ul>
+                                    <li>margin: auto; (khi theo luồng bình thường khác absolute) + left: 0; + right: 0;</li>
+                                    <li>left: 50%; +  margin-left: - phân nửa kích thước element con chứa position: absolute</li>
+                                </ul>
+                            </li>
+                            <li>Để căn giữa theo chiều dọc 
+                                <ul>
+                                    <li>margin: auto; + top: 0; + bottom: 0;</li>
+                                    <li>top: 50%; + margin-top: - phân nửa kích thước của element cha</li>
+                                </ul>
+                            </li>
+                            <li>Áp dụng cả căn dọc và ngang để căn ngay trung tâm</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Fixed Position (cố định)
+                <ul>
+                    <li>Phần tử định vị so với trình duyệt (viewport)</li>
+                    <li>Phân biệt là định vị so với viewport chứ không phải root element (html, body)</li>
+                    <li>Tương tự như absolute nhưng khác là chỉ định vị so với <strong>viewport</strong></li>
+                    <li>Thường có right sẽ không có left, có top sẽ không có bottom (để dễ kiểm soát vị trí và nó hợp lí)</li>
+                    <li>Box sẽ luôn đứng yên trên màn hình (kể cả khi cuộn trang) -> vì nó cũng sẽ bị loại khỏi luồng bố cục thông thường -> chỉ bám theo vị trí so với trình duyệt</li>
+                    <li>Khi không set width (width:auto) -> width sẽ thu gọn lại đúng bằng content (trừ một vài trường hợp đặc biệt - xem lại ở absolute) -> tương tự với absolut</li>
+                    <li>Thường dùng cho menu, header, nút trở về đầu trang, nút cuộn lên xuống,...</li>
+                </ul>
+            </li>
+           
+            <li>Sticky Positionn (dính) -> Kén chọn, một vài trình duyệt không chưa hỗ trợ
+                <ul>
+                    <li>Là sự kết hợp giữa fixed và relative</li>
+                    <li>Relative: Phần tử vẫn chiếm chỗ trong luồng bố cục thông thường</li>
+                    <li>Fixed: trở thành fixed khi cuộn trang</li>
+                    <li>Fixed: chỉ tác dụng trong div container chứa nó</li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="css/css04.html" target="_blank">Test Position</a>
+        <a href="css/css04-2.html" target="_blank">Test position part 2</a>
+    </div>
+    <div>
+        <h3>Bài 5: Display (youtube:Nodemy (bài 6 trong list CSS căn bản))</h3>
+
+        <ul>
+            <li>none
+                <ul>
+                    <li>Dùng để ẩn phần tử, không chiếm không gian trên trang</li>
+                    <li>Ứng dụng: Ẩn/hiện menu khi bấm nút</li>
+                </ul>
+            </li>
+            <li>inline
+                <ul>
+                    <li>Phần tử có kích thước chiều rộng tương ứng với nội dung</li>
+                    <li>Ví dụ phần tử mặc định inline: span, a, strong, b, i, em</li>
+                    <li>Ứng dụng: để ghép đoạn văn bản hoặc icon vào cùng một dòng</li>
+                    <li>Không thể set width/height trực tiếp</li>
+                </ul>
+            </li>
+            <li>block
+                <ul>
+                    <li>Phần tử chiếm toàn bộ chiều rộng của dòng</li>
+                    <li>Ví dụ phần tử mặc định block: div, p, h1-h6, ul, ol, li</li>
+                    <li>Ứng dụng: khi chia layout thành khối muốn phần tử chiếm trọn hàng để dễ căn chỉnh</li>
+                    <li>Có thể set width, height, padding, margin,..</li>
+                </ul>
+            </li>
+            <li>inline-block
+                <ul>
+                    <li>Tương tự inline nhưng có thể set width/height</li>
+                    <li>Ví dụ phần tử mặc định inline-block: button, input, select, textarea</li>
+                </ul>
+            </li>
+            <li>flex (có thể sài với mọi trường hợp)
+                <ul>
+                    <li>Dùng cho phần tử cha để điều hướng các phần tử con một cách tự động mà không cần phải thủ công (chỉnh sửa height, width của các phần tử con)</li>
+                </ul>
+            </li>
+            <li>...</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Bài 6: Stacking Context (thứ tự tầng layout) với Position</h3>
+        <div>Có thể hiểu một stacking context là một cái hộp chứa giấy, mỗi tờ giấy là một tầng layout (có position != static)</div>
+        <div>
+        
+        <div> 
+            <h4>Stacking Order</h4>
+            <ul>
+                <li>Unpositioned Element: là element không được set giá trị của thuộc tính position (mặc định sẽ là static)
+                    <ul>
+                        <li>Không tạo ra stacking context mới</li>
+                        <li>Vì element nằm trong normal flow nên sẽ nằm ở tầng dưới cùng nếu xảy ra đụng độ, chồng lấn với các element có giá trị != static</li>
+                        <li>Nếu cùng là unpositioned element thì element nào định nghĩa mới nhất (sau) trong DOM sẽ nằm ở trên</li>
+                    </ul>
+                </li>
+                <li>Positioned Element: các elememt được set giá trị của thuộc tính position != static (relative, absolute, fixed, sticky,..)
+                    <ul>
+                        <li>Có thể tạo stacking context nếu z-index != auto</li>
+                        <li>Nếu cùng z-index (hoặc có z-index = auto) thì thứ tự DOM (của html) sẽ quyết định, nghĩa là element nào định nghĩa sau sẽ nằm ở tầng trên</li>
+                    </ul>
+                </li>
+                <li>Nếu xảy ra chồng lấn không cần biết element nào định nghĩa sau -> positioned element luôn nằm trên unpositioned element</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4>Thuộc tính z-index</h4>
+            <ul>
+                <li>Không tác dụng với position: static (ngoại lệ là flex item, gird item,..)</li>
+                <li>Số càng lớn thì càng ở tầng cao hơn</li>
+                <li>Mỗi stacking context là một thế giới riêng -> các element bên trong nó so với nhau bởi z-index</li>
+                <li>Luôn có root stacking context</li>
+                <li>Thuộc tính z-index của element con trong stacking context sẽ bị giới hạn bởi z-index của element cha</li>
+            </ul>
+        </div>
+
+        <h4>Một số thuộc tính như transform và opacity sẽ làm cho element tạo một staking context mới</h4>
+        <a href="css/css06.html">Test Stacking Context</a>
+    </div>
+
+    <div>
+        <h3>Bài 7: Flex box</h3>
+
+    </div>
+
+    <div>
+        <h3>Bài 8: CSS grid</h3>
+    </div>
+
+    <div>
+        <h3>Bài 9: Responsive Design</h3>
+    </div>
+
+    <div>
+        <h3>Bài 10: CSS Animation</h3>
+    </div>
+
+     <div>
+        <h3>z-index(độ sâu, các tầng) ||</h3>
+        <ul>
+            <li>Cần biết loại position mặc định</li>
+        </ul>
+    </div>
+
+
+
+
+    <hr>
+    <hr>
+    <div><h2>F8-SHOP</h2></div>
+    <div>
+        <h3>Bài 1: CSS Variable (biến)</h3>
+        <h4>Có 2 loại</h4>
+        <ul>
+            <li>Biến toàn cục</li>
+            <li>Biến cụ bộ</li>
+        </ul>
+        <a href="css-f8-shop/css01.html" target="_blank"> Test css variable</a>
+    </div>
+    <div>
+        <h3>Bài 2: CSS Unit</h3>
+        <ol>
+            <li>Absolute Unit (đơn vị tuyệt đối): trình duyệt thay đổi nhưng kích thước vẫn giữa nguyên
+                <ul>
+                    <li>px (cần nhớ)</li>
+                    <li>pt</li>
+                    <li>cm</li>
+                    <li>mm</li>
+                    <li>inch</li>
+                    <li>pc</li>
+                </ul>
+            </li>
+            <li>Relative Unit (đơn vị tương đối): thay đổi theo kích thước trình duyệt (thẻ chứa nó nếu có, mặc định là theo thẻ body, mà thẻ body lại theo thẻ html)
+                <ul>
+                    <li>% (cần nhớ): dựa theo thẻ cha gần nhất có thuộc tính tương ứng có giá trị cụ thể != auto. 
+                        <ul>
+                            <li>Ví dụ 1: thuộc tính weight sẽ luôn có tham chiếu. Nếu xét đến tận thẻ body, html mà thuộc tính đó vẫn là auto nghĩa là không có giá trị cụ thể  ->  Dựa vào kích thước viewport (trình duyệt) làm tham chiếu.</li>
+                            <li>Ví dụ 2: thuộc tính height mặc định kích thược dựa theo content (vd: văn bản mình nhập). Nếu không có content và ở các phần tử cha không có giá trị cụ thể cho height  ->  Tại phần tử hiện tại height: 20% hay 100% cũng sẽ không có hiệu lực.</li>
+                        </ul>
+                    </li>
+                    <li>rem (cần nhớ): dựa theo thuộc tính font-size của thẻ html, thường dùng rem hơn là em vì chỉ phụ thuộc vào thẻ html dễ điều chỉnh. Mặc định font-size của html 100% = 16px => 10px = 62,5%</li>
+                    <li>em (cần nhớ): dựa theo kích thước font-size của chính nó hoặc thẻ cha gần nhất chứa nó có thuộc tính font-size</li>
+                    <li>vw (cần nhớ): viewport width - chiều rộng của trình duyệt, 1vw - 1% chiều rộng của trình duyệt (thẻ html)</li>
+                    <li>vh (cần nhớ): viewport height - chiều dài của trình duyệt, 100wh - 100% chiều dài của trình duyệt (thẻ html)</li>
+                    <li>vmin</li>
+                    <li>vmax</li>
+                    <li>ex</li>
+                    <li>ch</li>                    
+                </ul>
+            </li>
+        </ol>
+
+        <a href="css-f8-shop/css02.html" target="_blank">Test đơn vị</a>
+    </div>
+
+    <div>
+        <h3>Bài 3: Css Function</h3>
+        <ul>
+            <li>var(): để sử dụng biến trong css</li>
+            <li>linear-gradient(): tạo dãy tạo chuyển -> phối màu đẹp
+                <ul>
+                    <li>Đơn vị độ: deg (0 độ thì không cần đơn vị)</li>
+                    <li>Với 0 độ (màu chuyển từ dưới - trên), 90 độ (màu chuyển từ trái -> phải),...</li>
+                    <li>Tham số 1: hướng xoay (từ 0 đến 360 độ). Mặc định nếu không có tham số 1 sẽ là 180deg (trên - dưới)</li>
+                    <li>Tham số 2: màu bắt đầu chuyển. Với hướng xoay 0 độ -> màu này sẽ ở dưới-bottom</li>
+                    <li>Tham số 3: màu kết thúc để chuyển. Với hướng xoay 0 độ -> màu này sẽ ở trên-top</li>
+                </ul>
+            </li>
+            <li>rgba(): màu nền có điều chỉnh trong suốt. Tham số a: từ 0 đến 1. Các tham số còn lại từ 0 đến 255</li>
+            <li>rgb(red, green, blue): dùng để phối màu với giá trị từ 0-255 (đen đến trắng). Ví dụ: rgb(0,0,0) là màu đen, rgb(255, 255, 255) là màu trắng, rgb(255, 0, 0) là màu đỏ</li>
+            <li>calc(): dùng để tính toán tỉ lệ, khi cần kết hợp nhiều đơn vị. Ví dụ: calc(50% + 20px)</li>
+            <li>attr(): tiếng anh là attribute, dùng để lấy giá trị của thuộc tính html và chèn vào nội dung, thuận tiện khi thay đổi giá trị thuộc tính -> nội dung sẽ thay đổi theo. Ví dụ: bên dưới</li>
+        </ul>
+        <a href="css-f8-shop/css03.html" target="_blank">Test hàm attr()</a>
+    </div>
+
+    <div>
+        <h3>Bài 4: Pseudo Class trong css (lớp giả trong css)</h3>
+        <div>Dùng để mô tả 1 trạng thái đặc biệt nào đó của element</div>
+        <ul>
+            <li>:root : tham chiếu tới phần tử gốc (thẻ html). Thường dùng để khai báo biến CSS toàn cục</li>
+            <li>:hover : trạng thái khi rê chuột vào</li>
+            <li>:active : trạng thái khi click vào và chưa nhả chuột</li>
+            <li>:first-child : thay đổi trạng thái phần tử con đầu tiên trong parent -> li</li>
+            <li>:last-child : thay đổi trạng thái phần tử con cuối cùng trong parent -> li</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Bài 5: Pseudo Element trong css (phần tử giả trong css)</h3>
+        <ul>
+            <li>::before : tương tự 1 thẻ div, luôn được ở vị trí đầu</li>
+            <li>::after : tương tự 1 thẻ div, luôn ở vị trí cuối</li>
+            <li>::first-letter : kí tự đầu tiên trong văn bản</li>
+            <li>::first-line: dòng đầu tiên trong văn bản</li>
+            <li>::selection : lựa chọn - trạng thái khi kéo thả chuột trái để chọn</li>
+            <li>Lưu ý phải có content để phần tử giả tồn tại: content=""; display: block;</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Bài 6: Box: đệm, viền và khoảng lề</h3>
+        <ul>
+            <li>Thuộc tính padding: phần đệm thêm cho content</li>
+            <li>Thuộc tính border: là nét liền, lớp vỏ - đường viền ngoài cùng</li>
+            <li>Thuộc tính margin: tạo khoảng cách từ box đến những box khác. Không ảnh hướng gì tới kích thước box</li>
+            <li>box-sizing: border-box; (default là content-box)</li>
+        </ul>
+        <a href="css-f8-shop/css06.html" target="_blank">Test Padding</a>
+    </div>
+
+    <div>
+        <h3>Bài 7: Thuộc tính tạo nền</h3>
+        <ul>
+            <li>background-color: màu nền;</li>
+            <li>background-clip: (type); (cần phân biệt với background-origin)
+                <ul>
+                    <li>Các loại: content-box, padding-box, border-box</li>
+                    <li>Mặc định là border-box</li>
+                    <li>Dùng để xác định phạm vi màu nền (ảnh nền) -> tác động tới hết background</li>
+                </ul>
+            </li>
+            <li>background-image: url(địa chỉ hình ảnh 1), url(địa chỉ hình ảnh 2);
+                <ul>
+                    <li>Có thể chèn nhiều ảnh lồng nhau cách nhau bởi dấu ","</li>
+                    <li>Ảnh 1 được thêm vào trước -> ở trên</li>
+                    <li>Ảnh 2 thêm vào sau -> ở dưới ảnh 1</li>
+                </ul>
+            </li>
+            <li>background-size: (chiều rộng ảnh) (chiều dài ảnh);
+                <ul>
+                    <li>Thường chỉ để chiều rộng -> chiều dài ảnh sẽ tự động điều chỉnh phù hợp tỉ lệ ảnh -> để ảnh không bị móp, méo</li>
+                    <li>Có thể để là: 100px, auto (tương ứng với khi không điền chiều dài)</li>
+                    <li>Có thể sài với keyword (contain, cover)
+                        <li>background-size: contain; /*lấy chiều dài tối đa của bức ảnh, sao cho ảnh vẫn giữ nguyên tỉ lệ không bị che khuất=> tùy thường là 100% width khi trình duyệt nhỏ lại theo chiều ngang*/</li>
+                        <li>background-size: cover; /*100% height => ảnh có thể bị che khuất*/</li>
+                    </li>
+                </ul>
+            </li>
+            <li>background-repeat: (type);
+                <ul>
+                    <li>Các loại: repeat, no-repeat, repeat-x, repeat-y</li>
+                    <li>Mặc định: repeat</li>
+                    <li>Lưu ý: ứng dụng của repeat để tạo ảnh nền (Gõ: repeat background stock image)</li>
+                </ul>
+            </li>
+            <li>background-origin: (type); (cần phân biệt với background-clip)
+                <ul>
+                    <li>Giống với background-clip nhưng đi kèm với background-image</li>
+                    <li>Mặc định: padding-box</li>
+                    <li>Dùng để xác định phạm vi của image thôi</li>
+                </ul>
+            </li>
+            <li>background-position: (vị trí);
+                <ul>
+                    <li>Xác định vị trí của ảnh nền</li>
+                    <li>Dùng với Keyword
+                        <ul>
+                            <li>Các keyword: top right, top left, top center, bottom right, bottom left, bottom center</li>
+                            <li>Nếu chỉ có 1 keyword -> tham số còn lại tự hiểu là center</li>
+                        </ul>
+                    </li>
+                    <li>Dùng với giá trị cụ thể
+                        <ul>
+                            <li>Tham số 1: trục x</li>
+                            <li>Tham số 2: trục y</li>
+                            <li>Tọa (0,0) -> Ở góc trên cùng bên trái</li>
+                            <li>Ví dụ 1 (đầy đủ 2 tham số): background-position: 20px 100px; - nghĩa là cách lề phải 20px, cách lề trên 100px</li>
+                            <li>Ví dụ 2 (1 tham số): background-position: 20px; - nghĩa là cách lề bên trái 20px, center theo chiều dọc</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Dùng kết hợp keyword và giá trị cụ thể (tương đối | tuyệt đối) (ví dụ: background-position: top 20px right 20px; - nghĩa là cách top 20px và cách right 20px)</li>
+                    <li>Sử dụng được với số âm, ảnh có thể bị đẩy ra ngoài viewport -> mất</li>
+                </ul>
+            </li>
+
+            <li>Sử dụng cú pháp SHORTHAND để định nghĩa nhanh image
+                <li>background: (image) (repeat) (position) / (size)</li>
+                <li>Lưu ý: trước Size phải có "/"</li>
+                <li>Thứ tự trên chỉ là tham khảo có thể thử nhiều cách (search để xem nhiều hơn)</li>
+            </li>
+        </ul>
+
+        <a href="css-f8-shop/css07.html" target="_blank">Test thuộc tính tạo nền</a>
+    </div>
+
+    <div>
+        <h3>Bài 8: Thuộc tính Position</h3>
+        <ul>
+            <li>Static</li>
+            <li>Relative (tương đối)
+                <ul>
+                    <li>Đặt vị trí hiện tại của mình làm cột mốc dùng các thuộc tính top, left, bottom, right để di chuyển phần tử</li>
+                    <li>Không phụ thuộc vào vị trí của những phần tử khác</li>
+                    <li>Có thể chèn lên trên phần tử khác</li>
+                </ul>
+            </li>
+            <li>Absolute (tuyệt đối)
+                <ul>
+                    <li>Định vị dựa trên phần tử cha gần nhất có thuộc tính position khác auto</li>
+                </ul>
+            </li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Bài 9: Thuộc tính Flexbox trong CSS</h3>
+        <h4>Thành phần</h4>
+        <ul>
+            <li>flex contain
+                <ul>
+                    <li>flex item: phần tử con bên trong flex contain
+                        <ul>
+                            <li>main size: chiều rộng của flex item</li>
+                            <li>cross size: chiều dài của flex item</li>
+                        </ul>
+                    </li>
+                    <li>main axis: chiều rộng của flex contain
+                        <ul>
+                            <li>là chiều của các flex item (ngang | dọc)</li>
+                            <li>main start: điểm bắt đầu thường là bên trái</li>
+                            <li>main end: điểm kết thúc thường là bên phải</li>
+                        </ul>
+                    </li>
+                    <li>cross axis: chiều dài của flex contain
+                        <ul>
+                            <li>là trục vuông góc với main axis</li>
+                            <li>cross start: điểm bắt đầu thường là ở trên cùng</li>
+                            <li>cross end: điểm kết thúc thường là ở dưới cùng</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Những thuộc tính sử dụng trong Flexbox</h4>
+        <ul>
+            <li>display: flex | inline-flex</li>
+            <li>gap, row-gap, comlumn-gap: khoảng cách giữa các flex-item</li>
+            <li>flex-direction: row | column | row-reverse | column-reverse;
+                <ul>
+                    <li>dùng để thay đổi phương hướng của main axis (ngang | dọc)</li>
+                    <li>default: row;</li>
+                    <li>Thứ tự: main-start -> main-end</li>
+                </ul>
+            </li>
+            <li>flex-wrap: nowrap | wrap | wrap-reverse;
+                <ul>
+                    <li>dùng để chỉnh xuống dòng</li>
+                    <li>default: nowrap; -> các flex item sẽ xếp theo một chiều không xuống dòng dù đã hết chỗ</li>
+                    <li>wrap-reverse: để đổi cross start và cross end, thay vì hết xuống dòng thì nó nhảy lên trên (xếp từ main-start -> main-end)</li>
+                </ul>
+            </li>
+            <li>flex-flow: [flex-direction] [flex-wrap];
+                <ul>
+                    <li>là cú pháp shorthand cho flex-direction và flex-wrap</li>
+                </ul>
+            </li>
+            <li>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+                <ul>
+                    <li>dùng để căn chỉnh các flex-item theo trục main</li>
+                    <li>default: flex-start;</li>
+                    <li>space-between: kéo căn ra hai bên, ở giữa các flex-item căn đều nhau</li>
+                    <li>sapce-around: có thể hiểu là mỗi flex-item có margin ở 4 phía đều nhau</li>
+                    <li>space-evenly: khoảng cách giữa các flex-item đều nhau, tính luôn cả rìa trái phải</li>
+                </ul>
+            </li>
+            <li>Không có thuộc tính cho mỗi flex-item -> có thể sài margin: auto; margin-left: auto; margin-bottom: auto,.. để căn chỉnh</li>
+            <li>align-content: flex-start | flex-end | center | stretch | space-between | space-around | space-evenly
+                <ul>
+                    <li>tương tự justify-content, nhưng align-content là xét theo chiều của cross axit và có thêm giá trị stretch là mặc định</li>
+                    <li>điều kiện để sử dụng: flex-wrap: wrap (nhiều dòng)</li>
+                    <li>default: stretch;
+                        <ul>
+                            <li>nếu đã thỏa điều kiện có wrap</li>
+                            <li>các flex-item không có chiều cao cố định -> stretch sẽ kéo dãn các item để bao trọn height của container</li>
+                            <li>nếu các flex-item có chiều cao cố định -> mặc định có thể ngầm hiểu (hiểu theo cách này để dễ hình dung thôi thực chất không phải vậy) mỗi dòng sẽ có margin-bottom bằng nhau sao cho bao trọn toàn bộ height của container</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>align-items: flex-start | flex-end | center | baseline | stretch
+                <ul>
+                    <li>dùng để căn chỉnh các flex item theo trục cross</li>
+                    <li>áp dụng trên mỗi dòng (1^2 + 2^2) của flex-container chứ không phải áp dụng cho tất cả các dòng (1 + 2)^2</li>
+                    <li>default: stretch;</li>
+                    <li>baseline: căn theo baseline đầu tiên của nội dung text của mỗi flex-item (flext-item có nhiều thẻ h,p,.. thì nó sẽ lấy theo baseline của thẻ định nghĩa đầu tiên)</li>
+                </ul>
+            </li>
+            <li>align-self: flex-start | flex-end | center | baseline | stretch
+                <ul>
+                    <li>tương tự align-items, nhưng thuộc tính này để flex-item sài</li>
+                    <li>ghi đè align-items cho từng flex-item riêng</li>
+                </ul>
+            </li>
+            <li>flex-basis: kích thước của main size (tùy vào row hay column mà main size là chiều ngang hay chiều dọc), mặc định là auto (nếu không set thì nó dựa vào width, height của flex-item), ghi đè lên kích thước width, height</li>
+            <li>flex-grow: tăng kích thước main size theo chiều của main axis, đúng hơn là chia tỉ lệ không gian trống còn lại của flex-container cho flex-item đó</li>
+            <li>flex-shrink: ngược lại làm thu nhỏ kích thước main size, dùng khi các flex-item bị tràn ra ngoài flex-container</li>
+            <li>flex: [flex-grow] [flex-shrink] [flex-basis];</li>
+            <li>order: thứ tự hiển thị flex item theo trục main, mặc định sẽ là 0</li>
+        </ul>
+        <div>Trong các thuộc tính trên: align-self, flex-basis, flex-grow, flex-shrink, flex-basis, flex, order được dùng cho flex-item</div>
+        <li>Lưu ý: trong flex-item độ ưu tiên về kích thước như sau: width/height -> flex-basis (nếu != auto): ghi đè width/height -> flex-grow/flex-shrink/flex: sau khi có kích thước cơ sở tiến hành tính toán tỉ lệ để chia không gian còn dư thừa, nhỏ lại -> min/max của width/height: áp dụng giới hạn</li>
+
+        <a href="./css-f8-shop/css08.html" target="_blank">Test Flexbox</a>
+        <a href="./css-f8-shop/css08-2.html" target="_blank">Test Flexbox 2</a>
+    </div>
+
+    <div>
+        <h3>Thực hành làm Web The Band (One page)</h3>
+        <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm">Trang web mẫu</a>
+
+        <h4>Giới thiệu: Những thành phần thường gặp trên giao diện website</h4>
+        <ul>
+            <li>Header (đầu trang)</li>
+            <li>Navigation (điều hướng)</li>
+            <li>Breadcrumb (chỉ định để biết đang ở chỗ nào)</li>
+            <li>Sidebar (thanh trái|phải)</li>
+            <li>Slider (trượt trượt list hình ảnh, video,.. thường là hình ảnh)</li>
+            <li>Banner (ảnh muốn quảng cáo, muốn được biết tới)</li>
+            <li>Content (nội dung chính ở trung tâm website)</li>
+            <li>Footer (chân trang)</li>
+        </ul>
+         
+        <h4>Thứ tự các bước làm một website</h4>
+        <ol>
+            <li>Phân tích
+                <ul>
+                    <li>Header</li>
+                    <li>Slider</li>
+                    <li>Content
+                        <ol>
+                            <li>About (giới thiệu về ban nhạc)</li>
+                            <li>Tour (để xem lịch kế tiếp, đặt mua vé)</li>
+                            <li>Contact (để liên hệ)</li>
+                            <li>Image</li>
+                        </ol>
+                    </li>
+                    <li>Footer</li>
+                </ul>
+            </li>
+            <li>Dựng base (xây móng)</li>
+            <li>Xây dựng từng phần theo phân tích</li>
+            <li>Hoàn thiện</li>
+        </ol>
+
+        <div>Cách bấm tổ hợp nhanh</div>
+
+        <h4>Phân tích dự án: Web The Band</h4>
+        <a href="the-band/index.html" target="_blank">Dự án Web The Band</a>
+    </div>
+
+   
+    <hr>
+    
+</body>
+</html>
+
+<!--
+Thẻ đóng - thẻ mở 
+Cấu trúc file: doctype -> html -> gồm head (title, meta charset = 'utf-8') và body 
+-->
+
+<!-- 
+Các thẻ html thông dụng 
+1. heading: từ h1 đến h6 (thường trong một trang web chỉ có 1 thẻ h1)
+2. p: paragraph
+3. img (src = 'link ảnh', alt = 'Ảnh băng tuyết' -> sẽ hiện chữ Ảnh băng tuyết nếu link nó bị lỗi)
+4. a 
+5. ul, li 
+6. table -> gòm thead & tbody
+7. input
+8. button
+9. div
+-->
+
+<!--
+Attribute: thuộc tính nằm trong thẻ mở của html
+-->
+ 
+
+
+<!--
+(CSS)
+
+tag 
+element
+style 
+selector
+box: content -> border -> padding -> margin
+position: static, relative, absolute, sticky, fixed
+variable 
+unit
+pseudo class
+-->
+
+<!-- 
+
+Φ   1 camera trong nhà tầng dưới
+Φ   2 bộ bàn-ghế + 2 đèn bàn 
+    1 tai nghe chụp
+    1 chỗ để nằm nghỉ mệt 
+
+Φ   1 thao rửa chén + nước rửa chén + bịt nước rửa tay lifeboy + bao tay
+Φ   1 thao đựng nước tắm + 1 ca nước
+Φ   thay đầu vòi có thêm chỗ gắn vòi xịt 
+    tủ lạnh
+Φ   bếp ga 
+Φ   chổi + cây lau + sọt rác 
+
+Φ   kệ chén + bộ chén đũa muỗng + bình nước uống
+    mô tả (có bàn nhỏ sẳn -> đựng bình nước + kệ chén + mỹ phẩm
+    1 cái bàn nhỏ của Đạt + ghế tựa có sẳn để trên gác)
+
+    niệm, mùng tự đem theo
+    gối, vỏ gối
+
+    kệ để đồ trên gác 
+
+-->
